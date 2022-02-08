@@ -1,4 +1,8 @@
-# SortingApp
+# Tornado Sort
+
+Tornado Sort is an Angular application that accepts 5 numbers in a range from 0 to 999 and after a 10 seconds delay displays an ascending sorted list of inserted numbers. The lowest number is formatted in color red and the highest number is formatted in color green. 
+
+This was a test application made for learning purpose. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
