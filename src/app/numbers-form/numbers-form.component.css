@@ -1,0 +1,40 @@
+h1 {
+  color: var(--blue-secondary-color);
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.fn-btns {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 120px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fn-btns:disabled {
+  background-color: var(--grey-color);
+}
+
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.number {
+  text-align: center;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.highest-number {
+  color: var(--highest-number-color);
+  font-size: large;
+}
+.lowest-number {
+  color: var(--lowest-number-color);
+  font-size: large;
+  border-style: solid;
+}

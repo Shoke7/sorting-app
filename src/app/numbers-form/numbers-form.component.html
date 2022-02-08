@@ -1,0 +1,107 @@
+<section class="container mt-5">
+  <div class="card border shadow bg-white rounded">
+    <h1 class="mt-4">Insert five numbers in range of 1 to 999</h1>
+    <hr />
+
+    <div [formGroup]="form">
+      <div class="form-group row">
+        <label class="col-4 col-form-label ml-5 mt-2" for="nr1"
+          >{{ labels[0] }}
+        </label>
+        <div class="col-5 mt-2">
+          <input
+            formControlName="nr1"
+            id="nr1"
+            class="form-control"
+            maxlength="3"
+          />
+        </div>
+
+        <label class="col-4 col-form-label ml-5 mt-2" for="nr2"
+          >{{ labels[1] }}
+        </label>
+        <div class="col-5 mt-2">
+          <input
+            formControlName="nr2"
+            id="nr2"
+            maxlength="3"
+            class="form-control"
+          />
+        </div>
+
+        <label class="col-4 col-form-label ml-5 mt-2" for="nr3"
+          >{{ labels[2] }}
+        </label>
+        <div class="col-5 mt-2">
+          <input
+            formControlName="nr3"
+            id="nr3"
+            maxlength="3"
+            class="form-control"
+          />
+        </div>
+
+        <label class="col-4 col-form-label ml-5 mt-2" for="nr4"
+          >{{ labels[3] }}
+        </label>
+        <div class="col-5 mt-2">
+          <input
+            formControlName="nr4"
+            id="nr4"
+            class="form-control"
+            maxlength="3"
+          />
+        </div>
+
+        <label class="col-4 col-form-label ml-5 mt-2" for="nr5"
+          >{{ labels[4] }}
+        </label>
+        <div class="col-5 mt-2">
+          <input
+            formControlName="nr5"
+            id="nr5"
+            maxlength="3"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="row" *ngIf="loading">
+        <mat-progress-bar
+          class="mr-5 ml-5 mt-2 mb-2"
+          mode="indeterminate"
+        ></mat-progress-bar>
+      </div>
+
+      <div class="row" *ngIf="sortedArray.length !== 0">
+        <label class="col-3 col-form-label ml-5 mt-4">Sorting Result: </label>
+        <div class="col mt-4 number lowest-number">{{ sortedArray[0] }}</div>
+        <div class="col mt-4 number">{{ sortedArray[1] }}</div>
+        <div class="col mt-4 number">{{ sortedArray[2] }}</div>
+        <div class="col mt-4 number">{{ sortedArray[3] }}</div>
+        <div class="col mt-4 mr-5 number highest-number">
+          {{ sortedArray[4] }}
+        </div>
+      </div>
+
+      <div class="w-100"></div>
+      <hr />
+      <div class="row justify-content-center m-4">
+        <button
+          class="btn btn-primary fn-btns mr-3"
+          (click)="resultWithDelay()"
+          [disabled]="!form.valid"
+        >
+          Sort
+        </button>
+        <button
+          class="btn btn-primary fn-btns ml-3"
+          (click)="resetForm()"
+          [disabled]="form.pristine"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

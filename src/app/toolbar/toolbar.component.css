@@ -1,0 +1,5 @@
+.toolbar {
+    height: 8vh;
+    background-color: var(--blue-primary-color);
+    color: white;
+}
